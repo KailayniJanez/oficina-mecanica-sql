@@ -1,24 +1,35 @@
-# Oficina Mecânica - Banco de Dados SQL
+# 🚗 Oficina Mecânica - Banco de Dados SQL
 
-## Descrição do Projeto
-Esquema lógico para uma oficina mecânica, incluindo clientes, veículos, ordens de serviço, equipes de mecânicos, serviços e peças.
+## 📋 Descrição do Projeto
 
-## Modelo Relacional
-- Cliente (PF/PJ)
-- Veículo
-- Ordem de Serviço
-- Serviço e Peça (catálogos)
-- Item de OS (serviços executados e peças utilizadas)
-- Equipe e Mecânico
+Este projeto implementa um **banco de dados relacional** para uma oficina mecânica, permitindo gerenciar:
 
-## Como executar
-1. Execute `01_schema.sql` no seu SGBD (MySQL)
-2. Execute `02_seed.sql` para popular dados
-3. Execute `03_queries.sql` para testar as consultas
+- ✅ Clientes (pessoa física e jurídica)
+- ✅ Veículos
+- ✅ Ordens de Serviço (OS)
+- ✅ Serviços e Peças
+- ✅ Equipes de Mecânicos
+- ✅ Itens executados em cada OS
 
-## Tecnologias
-- MySQL
-- SQL padrão
+## 🗂️ Estrutura do Banco de Dados
+
+### Tabelas Principais
+- `Cliente` - Dados dos clientes
+- `Veiculo` - Veículos associados aos clientes
+- `OrdemServico` - OS geradas para cada veículo
+- `Servico` - Catálogo de serviços oferecidos
+- `Peca` - Catálogo de peças
+- `Equipe` - Equipes de trabalho
+- `Mecanico` - Funcionários
+- `Item_Servico` - Serviços realizados em cada OS
+- `Item_Peca` - Peças utilizadas em cada OS
+
+### Relacionamentos Principais
+- Um **Cliente** pode ter vários **Veículos**
+- Um **Veículo** pode ter várias **OS**
+- Uma **OS** tem uma **Equipe** responsável
+- Uma **Equipe** tem vários **Mecânicos**
+- Uma **OS** pode ter vários **Serviços** e **Peças**
 
 ## Autor
 Kailayni Janez
